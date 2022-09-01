@@ -18,13 +18,13 @@ body {
     object-fit: cover;
 }
 
-.intro h1 {
+.imageArea h1 {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
     font-size: 70px;
-    color: white;
+    color: #f5f7ec;
 }
 
 section{
@@ -36,4 +36,10 @@ section h1 {
     padding-top: 300px;
     text-align: center;
     font-size: 80px;
+}
+
+.imageArea img{
+    height: 100;
+    width: 100%;
+    object-fit: cover;
 }
