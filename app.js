@@ -86,7 +86,7 @@ scene3.on('update', e => {
 scene4.on('update', e => {
     char = parseInt((e.scrollPos-3900) / 100);
     scrollDirection = e.target.controller().info("scrollDirection");
-    console.log(char, scrollDirection);
+    //console.log(char, scrollDirection);
 });
 
 
