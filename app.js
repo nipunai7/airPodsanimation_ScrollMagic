@@ -12,6 +12,25 @@ textAnimation.textContent = "";
 
 //const end = section.querySelector('h1');
 
+let downloadedImages = 0;
+function httpGetAsync(theUrl)
+{
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.onreadystatechange = function() { 
+        if (xmlHttp.readyState == 4 && xmlHttp.status == 200){
+            downloadedImages++
+        }else{
+            httpGetAsync(theUrl,callback)
+        }
+    }
+    xmlHttp.open("GET", theUrl, true); // true for asynchronous 
+    xmlHttp.send(null);
+}
+
+for (let index = 0; index < 196; index++) {
+    httpGetAsync('https://airpodsanimation-scrollmagic.pages.dev/images/ezgif-frame-'+addLeadingZeros(index,3)+'.jpg')    
+}
+
 const controller = new ScrollMagic.Controller();
 
 function addLeadingZeros(num, totalLength) {
