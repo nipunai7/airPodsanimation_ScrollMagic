@@ -13,12 +13,14 @@ textAnimation.textContent = "";
 //const end = section.querySelector('h1');
 
 let downloadedImages = 0;
+var images= [];
 function httpGetAsync(theUrl)
 {
     var xmlHttp = new XMLHttpRequest();
     xmlHttp.onreadystatechange = function() { 
         if (xmlHttp.readyState == 4 && xmlHttp.status == 200){
             downloadedImages++
+            images.push(new Image())
         }else{
             httpGetAsync(theUrl,callback)
         }
@@ -28,7 +30,9 @@ function httpGetAsync(theUrl)
 }
 
 for (let index = 0; index < 196; index++) {
-    httpGetAsync('https://airpodsanimation-scrollmagic.pages.dev/images/ezgif-frame-'+addLeadingZeros(index,3)+'.jpg')    
+    //httpGetAsync('https://airpodsanimation-scrollmagic.pages.dev/images/ezgif-frame-'+addLeadingZeros(index,3)+'.jpg');
+    images.push(new Image())
+    images[index].src = 'https://airpodsanimation-scrollmagic.pages.dev/images/ezgif-frame-'+addLeadingZeros(index,3)+'.jpg';    
 }
 
 const controller = new ScrollMagic.Controller();
