@@ -32,7 +32,7 @@ function httpGetAsync(theUrl)
 for (let index = 0; index < 196; index++) {
     //httpGetAsync('https://airpodsanimation-scrollmagic.pages.dev/images/ezgif-frame-'+addLeadingZeros(index,3)+'.jpg');
     images.push(new Image())
-    images[index].src = 'https://airpodsanimation-scrollmagic.pages.dev/images/ezgif-frame-'+addLeadingZeros(index,3)+'.jpg';    
+    images[index].src = '/images/ezgif-frame-'+addLeadingZeros(index,3)+'.jpg';    
 }
 
 const controller = new ScrollMagic.Controller();
